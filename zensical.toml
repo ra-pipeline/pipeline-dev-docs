@@ -1,0 +1,53 @@
+[project]
+site_name = "Pipeline Developer Documentation"
+site_description = "Community-driven radio astronomy pipeline developer documentation, architecture, and knowledge base"
+copyright = "Copyright &copy; 2026 Pipeline Contributors"
+docs_dir = "docs"
+site_dir = "site"
+extra_css = ["stylesheets/extra.css"]
+extra_javascript = ["javascripts/mermaid-zoom.js"]
+
+nav = [
+    { "Overview" = "index.md" },
+    { "Getting Started" = "getting-started.md" },
+    { "Development Memos" = [
+        "pdm/index.md",
+        "pdm/pdm-001-agent-workflow-security.md",
+        "pdm/pdm-002-collaboration-platform-governance.md",
+        # "pdm/pdm-003-rag-design-knowledge-systems.md"
+    ]},
+    # Under review - hidden from active navigation:
+    # { "Architecture" = [
+    #     "architecture/overview.md",
+    #     "architecture/tasks-and-heuristics.md"
+    # ]},
+    # { "Quality Assurance" = [
+    #     "qa/strategy.md",
+    #     "qa/validation-vs-verification.md"
+    # ]},
+    # { "Knowledge Base" = [
+    #     "kb/index.md"
+    # ]}
+]
+
+[project.theme]
+name = "material"
+language = "en"
+features = [
+    "navigation.tabs",
+    "navigation.sections",
+    "navigation.expand",
+    "navigation.top",
+    "navigation.tracking",
+    "navigation.indexes",
+    "content.code.copy",
+    "content.action.edit",
+    "search.suggest",
+    "search.highlight",
+    "search.share"
+]
+
+[project.theme.palette]
+scheme = "default"
+primary = "indigo"
+accent = "indigo"

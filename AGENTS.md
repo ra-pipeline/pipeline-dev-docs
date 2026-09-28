@@ -29,8 +29,10 @@ Always verify `uvx --python 3.12 zensical build --clean` runs without warnings b
   ```
 - New PDM documents belong in `docs/pdm/` and automatically collapse under the Development Memos section when `navigation.indexes` is enabled.
 
-## Common Sense Safety
+## Git & Review Policy
 
-- Don't run `rm -rf` or destructive deletions without asking first.
-- Never force-push (`git push --force`) or rewrite shared branch history.
-- Never dump or print secrets, tokens, or private credentials to the terminal or logs.
+- **Do NOT automatically commit or push**: Never run `git commit` or `git push` autonomously. Always keep changes in the working directory and wait for explicit human review and confirmation before committing or pushing.
+- **Verify first**: Always test and verify changes (e.g., `uvx --python 3.12 zensical build --clean`) and summarize modified files for the reviewer.
+- **No destructive operations**: Never run `rm -rf` or delete files without explicit confirmation.
+- **No history rewrites**: Never force-push (`git push --force`) or rewrite branch history.
+- **Secret hygiene**: Never print or leak secrets, tokens, dotfiles, or credentials to output streams.
