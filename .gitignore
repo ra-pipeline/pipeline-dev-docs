@@ -1,0 +1,16 @@
+# Zensical build output
+site/
+.cache/
+
+# Python virtual environments & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# IDE & OS files
+.DS_Store
+.vscode/
+.idea/
