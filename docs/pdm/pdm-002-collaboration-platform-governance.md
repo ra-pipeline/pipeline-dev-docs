@@ -214,18 +214,18 @@ sequenceDiagram
     autonumber
     actor Engineer as Human Engineer
     participant Agent as Agent Assistant
-    participant Delimiter as Sanitizer &amp; Delimiter
+    participant Delimiter as Sanitizer and Delimiter
     participant MCP as MCP / API Gateway
-    participant Platform as Collaboration Platform (Jira / Bitbucket)
+    participant Platform as Jira / Bitbucket
 
-    Engineer->>Agent: Request task (e.g., "Triage Jira ticket PIPE-567")
+    Engineer->>Agent: Request task (e.g., Triage Jira ticket PIPE-567)
     Agent->>MCP: Fetch ticket data
     MCP->>Platform: API GET /rest/api/3/issue/PIPE-567
     Platform-->>MCP: Raw ticket JSON
-    MCP->>Delimiter: Wrap in structural delimiters &amp; filter control directives
-    Delimiter-->>Agent: Sanitized context (&lt;jira_issue&gt;...&lt;/jira_issue&gt;)
+    MCP->>Delimiter: Apply structural delimiters and filter directives
+    Delimiter-->>Agent: Sanitized context [jira_issue tags]
     Agent->>Agent: Reason, synthesize solution, draft response
-    Agent-->>Engineer: Present proposed comment &amp; status recommendation (Draft)
+    Agent-->>Engineer: Present proposed comment and status (Draft)
     
     rect rgb(240, 248, 255)
     Note over Engineer,Agent: Human Review Gate
