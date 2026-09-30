@@ -51,3 +51,7 @@ features = [
 scheme = "default"
 primary = "indigo"
 accent = "indigo"
+
+[project.extra]
+generator = false
+

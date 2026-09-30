@@ -181,7 +181,7 @@ flowchart TD
 ### 4.3 Bitbucket / Code Repositories (PR Reviews & Branches)
 
 1. **Enforce Branch Protections**:
-   - Primary and release branches (`main`, `master`, `release/*`) must require human peer review.
+   - Primary and release branches (`main`, `release/*`) must require human peer review.
    - Agent accounts must not possess merge privileges or permission to bypass branch protections.
 2. **Add Clear AI Disclosure Badges**:
    - Automated pull request comments should include an advisory badge:
